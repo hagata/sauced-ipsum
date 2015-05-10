@@ -1,0 +1,34 @@
+{
+  "name": "sauced-ipsum",
+  "version": "1.0.0",
+  "description": "placeholder text generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hagata/sauced-ipsum.git"
+  },
+  "keywords": [
+    "placeholder",
+    "dummy",
+    "text",
+    "lorem",
+    "ipsum",
+    "generator"
+  ],
+  "author": "genki hagata",
+  "license": "GNU",
+  "bugs": {
+    "url": "https://github.com/hagata/sauced-ipsum/issues"
+  },
+  "homepage": "https://github.com/hagata/sauced-ipsum",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-stylus": "^2.0.1"
+  },
+  "dependencies": {
+    "stylus": "^0.51.1"
+  }
+}
