@@ -41,6 +41,33 @@ var saucy = [
   "black beans",
 
 ];
+function collapseIntro(){
+	var introArea = document.getElementById('intro')
+  if (intro.classList.contains("collapse")) {
+
+  }else{
+    intro.classList.toggle("collapse");
+  }
+}
+
+
+function turnOnCopyButton(){
+	var copyButton =  document.getElementById('copy-ipsum')
+	if (copyButton.classList.contains("on")) {
+
+	}else{
+		copyButton.classList.toggle("on");
+	}
+}
+
+function turnOnDevArea(){
+	var devArea =  document.getElementById('dev-area')
+	if (devArea.classList.contains("on")) {
+
+	}else{
+		devArea.classList.toggle("on");
+	}
+}
   ZeroClipboard.config( { swfPath: "node_modules/zeroclipboard/dist/ZeroClipboard.swf" } );
 
 var client = new ZeroClipboard(document.getElementById('copy-ipsum'));
@@ -52,7 +79,7 @@ var generated = [];
 
 document.getElementById('generate-button').onclick = function() {
 	generated = [];
-  
+
   var genLength = document.getElementById('gen-length-value').value;
   var gentype = ""
 
@@ -67,6 +94,10 @@ document.getElementById('generate-button').onclick = function() {
   }
 
   generate(genLength, gentype)
+
+  collapseIntro();
+  turnOnCopyButton();
+  turnOnDevArea()
 }
 
 
@@ -78,7 +109,7 @@ Generate
 
 
 function generate(length, type) {
-  
+
 
   if (type == "words") {
     //Number of Words Generator function
@@ -105,7 +136,7 @@ function generate(length, type) {
 
       for (var i = 0; i < sentencesInParagraph; i++) {
 
-        
+
         paragraph.push(generateSentence() + ".")
 
       };
@@ -121,7 +152,7 @@ function generate(length, type) {
 
   printGenerated(type)
   //upgrade output to p tags?
- /* document.getElementById('output-ipsum').value = generated.join(" ");*/
+  /* document.getElementById('output-ipsum').value = generated.join(" ");*/
 }
 
 
@@ -129,7 +160,7 @@ function generate(length, type) {
 function printGenerated(genType){
   var printToInnerElement = document.getElementById('output-ipsum')
   
-	if (genType == "words"){
+  if (genType == "words"){
     if(generated.length < 5){
       printToInnerElement.innerHTML = "<h1 class='single'>" + generated.join(" ") + "</h1>"
     }else{

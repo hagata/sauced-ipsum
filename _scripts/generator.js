@@ -4,7 +4,7 @@ var generated = [];
 
 document.getElementById('generate-button').onclick = function() {
 	generated = [];
-  
+
   var genLength = document.getElementById('gen-length-value').value;
   var gentype = ""
 
@@ -19,6 +19,10 @@ document.getElementById('generate-button').onclick = function() {
   }
 
   generate(genLength, gentype)
+
+  collapseIntro();
+  turnOnCopyButton();
+  turnOnDevArea()
 }
 
 
@@ -30,7 +34,7 @@ Generate
 
 
 function generate(length, type) {
-  
+
 
   if (type == "words") {
     //Number of Words Generator function
@@ -57,7 +61,7 @@ function generate(length, type) {
 
       for (var i = 0; i < sentencesInParagraph; i++) {
 
-        
+
         paragraph.push(generateSentence() + ".")
 
       };
@@ -73,7 +77,7 @@ function generate(length, type) {
 
   printGenerated(type)
   //upgrade output to p tags?
- /* document.getElementById('output-ipsum').value = generated.join(" ");*/
+  /* document.getElementById('output-ipsum').value = generated.join(" ");*/
 }
 
 
@@ -81,7 +85,7 @@ function generate(length, type) {
 function printGenerated(genType){
   var printToInnerElement = document.getElementById('output-ipsum')
   
-	if (genType == "words"){
+  if (genType == "words"){
     if(generated.length < 5){
       printToInnerElement.innerHTML = "<h1 class='single'>" + generated.join(" ") + "</h1>"
     }else{
