@@ -1,9 +1,16 @@
 .copy-button
-   text-align: center;
-   border: 1px solid black;
-   background-color: #ccc;
-   margin: 10px;
-   padding: 10px;
+   @extend .button
+   color #f
    
-   &.zeroclipboard-is-hover { background-color: #eee; }
-   &.zeroclipboard-is-active { background-color: #aaa; }
+   svg
+     width 1.3em
+     display inline-block
+     vertical-align middle
+     margin-right 1rem
+     
+     g
+      stroke #fff 
+      stroke-width 3.5    
+   
+   &.zeroclipboard-is-hover { background-color: $theme-orange + 20%; }
+   &.zeroclipboard-is-active { background-color: $theme-orange;}

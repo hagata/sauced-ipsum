@@ -1,18 +1,39 @@
+.button,
+#generate-button,
+.copy-button {
+  text-align: center;
+  font-size: 1em;
+  border: none;
+  background-color: #ff5722;
+  margin: 0.5em 1.5em;
+  padding: 10px;
+  color: #fff;
+}
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+.wrapper {
+  width: 1000px;
+  margin: 0 auto;
+}
 .copy-button {
-  text-align: center;
-  border: 1px solid #000;
-  background-color: #ccc;
-  margin: 10px;
-  padding: 10px;
+  color: #fff;
+}
+.copy-button svg {
+  width: 1.3em;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1rem;
+}
+.copy-button svg g {
+  stroke: #fff;
+  stroke-width: 3.5;
 }
 .copy-button.zeroclipboard-is-hover {
-  background-color: #eee;
+  background-color: #ff794e;
 }
 .copy-button.zeroclipboard-is-active {
-  background-color: #aaa;
+  background-color: #ff5722;
 }

@@ -32,7 +32,9 @@ layout: default
     <textarea name="output-ipsum" id="output-ipsum" cols="30" rows="10" data-clipboard-text="Copy Me!"></textarea>
     <button id="copy-ipsum"
       class="copy-button"
-      data-clipboard-target="output-ipsum">press Me to copy</button>
+      data-clipboard-target="output-ipsum">
+      {% include svg/copyIcon.svg %} 
+      Copy!</button>
   </div>
   
   
@@ -40,7 +42,7 @@ layout: default
   <hr />
   <br />
 
-  <textarea name="paste" id="paste" cols="30" rows="10" placeolder="paste  test heh"></textarea>
+  <textarea name="paste" id="paste" cols="30" rows="10" placeholder="paste  test heh"></textarea>
 
 </div>
 
