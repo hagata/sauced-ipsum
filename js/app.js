@@ -79,30 +79,21 @@ function generate(length, type) {
     var paragraphs = []
     var paragraphLengthRange = Math.floor(Math.random() * (24 - 18 + 1) + 18);
 
-    for (var h = 0; h < length; h++) {
-      if (length == null) {
-        break;
-      }
+    for (var par = 0; par < length; par++) {
+      var paragraph = []
 
       for (var i = 0; i < paragraphLengthRange; i++) {
-
-        // REFACTOR REFACTOR REFACTOR!!! 
+//     // REFACTOR REFACTOR REFACTOR 
         var randomNumber = Math.floor(Math.random() * saucy.length);
-        paragraphs.push(saucy[randomNumber]);
+        paragraph.push(saucy[randomNumber]);
 
-      }
-			
-      
-      generated.push(paragraphs.join(" "))
-    }
-    
-   /* generated.push(paragraphs)*/
-    console.log(paragraphs)
-	
-    
-    //make a paragraph with a bunch of random words
+      };
 
-    //for each length, push a paragraph
+      paragraphs.push(paragraph.join(" "));
+      generated.push(paragraphs[par]);
+    };	
+    
+
   } else {
     console.log("no type")
   }
