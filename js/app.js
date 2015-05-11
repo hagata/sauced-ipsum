@@ -56,14 +56,25 @@ document.getElementById('generate-button').onclick = function() {
 
   if (document.getElementById('words').checked) {
     gentype = "words"
-  } else if (document.getElementById('paragraphs').checked) {
+  } 
+  else if(document.getElementById('sentence').checked){
+    gentype = "sentence"
+  }
+  else if (document.getElementById('paragraphs').checked) {
     gentype = "paragraphs"
   }
 
   generate(genLength, gentype)
 }
 
-//generate
+
+
+/*
+Generate
+========
+*/
+
+
 function generate(length, type) {
   
 
@@ -77,18 +88,23 @@ function generate(length, type) {
 
     }
   } 
+
+  else if(type == "sentence"){
+    var sentence = generateSentence()
+    generated.push(sentence + ".")
+  }
   
   else if (type == "paragraphs") {
     var paragraphs = []
-    var paragraphLengthRange = Math.floor(Math.random() * (24 - 18 + 1) + 18);
+    var sentencesInParagraph = Math.floor(Math.random() * (5 - 2 + 1) + 2);
 
     for (var par = 0; par < length; par++) {
       var paragraph = []
 
-      for (var i = 0; i < paragraphLengthRange; i++) {
-//     // REFACTOR REFACTOR REFACTOR 
-        var randomNumber = Math.floor(Math.random() * saucy.length);
-        paragraph.push(saucy[randomNumber]);
+      for (var i = 0; i < sentencesInParagraph; i++) {
+
+        
+        paragraph.push(generateSentence() + ".")
 
       };
 
@@ -116,4 +132,20 @@ function printGenerated(genType){
   }else{
     printToElement.value = generated.join("\r\n\r\n")
   }
+}
+
+
+
+function generateSentence(){
+  var sentence = [];
+  var sentenceLength = Math.floor(Math.random() * (14 - 4 + 1) + 4);
+
+  for (var i = 0; i < sentenceLength; i++) {
+    var randomNumber = Math.floor(Math.random() * saucy.length);
+    sentence.push(saucy[randomNumber]);
+  };
+ sentence[0] = sentence[0].charAt(0).toUpperCase() + sentence[0].substr(1);
+console.log(sentence[0][0].toUpperCase())
+
+  return sentence.join(" ")
 }

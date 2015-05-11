@@ -18,6 +18,7 @@ gulp.task('scripts', function(){
 
 gulp.task('watch', function() {
   gulp.watch('_styl/*', ['stylus']);
+  gulp.watch('_styl/**/*', ['stylus']);
   gulp.watch('_scripts/*', ['scripts']);
 
  
