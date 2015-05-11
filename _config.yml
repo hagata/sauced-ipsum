@@ -3,7 +3,7 @@ title: Sauced-Ipsum
 email: hello@turnfive.net
 description: > # this means to ignore newlines until "baseurl:"
   Placeholder text/ dummy text generator for delicious food.
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "/sauced-ipsum/" # the subpath of your site, e.g. /blog/
 url: "http://hagata.github.io/sauced-ipsum" # the base hostname & protocol for your site
 production_url : http://hagata.github.io/sauced-ipsum
 BASE_PATH : http://hagata.github.io/sauced-ipsum
