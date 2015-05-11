@@ -1,7 +1,20 @@
 .copy-button
    @extend .button
    color #f
+   width: 100%
+   margin 0 auto 1.5em
+   text-align center
+   display none
+   opacity 0
+   transition all .6s ease-in-out
    
+   @media screen and (min-width 768px)
+      width 200px
+   
+   &.on
+     display block
+     opacity 1
+     
    svg
      width 1.3em
      display inline-block

@@ -4,52 +4,51 @@ layout: default
 <!-- LETS IP SOME-->
 
 <div class="container">
-<h1>Sauced-ipsum</h1>
-  <p>A dummy text generator for saucy, delicious bbq words. Designed specifically for setting sample text for menu design.</p>
+  <div id="intro">
+
+    <h1>Sauced-ipsum</h1>
+    <p>A dummy text generator for saucy, delicious bbq words. Designed specifically for setting sample text for menu design.</p>
+  </div>
+
   <div class="controls">
 
    <input type="number" min="0" id="gen-length-value" placeholder="number of..." value="1" />
     
     <input type="radio" name="type" id="words" value="words" checked/>
     <label for="words">Words</label>
-    <br />
+    <!-- <br /> -->
     <input type="radio" name="type" id="sentence" value="sentence" checked/>
     <label for="sentence">Sentences</label>
-    <br />
+    <!-- <br /> -->
     <input type="radio" name="type" id="paragraphs" value-"paragraphs" />
     <label for="paragraphs">Paragraphs</label>
-    <br />
+    
     <button id="generate-button">Generate</button>
     
-
-    <!-- <fieldset class="options">
-        <p>Future options</p>
-    <input type="radio" name"optional" id="price" value="price" disabled/>
-     <label for="price">Include Price</label>
-    <input type="radio" name"optional" id="title" value="title" disabled/>
-      <label for="title">Include Title</label>
-    </fieldset> -->
-
   </div>
 
   <div class="output">
-    <textarea name="output-ipsum" id="output-ipsum" cols="30" rows="10" data-clipboard-text="Copy Me!"></textarea>
-    <button id="copy-ipsum"
+  <button id="copy-ipsum"
       class="copy-button"
       data-clipboard-target="output-ipsum">
       {% include svg/copyIcon.svg %} 
       Copy!</button>
+    <div name="output-ipsum" id="output-ipsum" >
+      
+    </div>
+    
   </div>
   
   
-  <hr />
-  <hr />
-  <br />
+  <div id="dev-area">
+    
+    <hr />
+    <br />
 
-  <textarea name="paste" id="paste" cols="30" rows="10" placeholder="paste  test heh"></textarea>
+    <textarea name="paste" id="paste" cols="30" rows="10" placeholder="Paste Test area…"></textarea>
+  </div>
 
-</div>
-
+  
 
 
 <script type="text/javascript" src="js/app.js"></script>

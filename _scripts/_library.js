@@ -31,7 +31,7 @@ var saucy = [
   "chopped",
   "cheezy",
   "fritters",
-  "corbread",
+  "cornbread",
   "hushpuppies",
   "jalapeno",
   "chives",
