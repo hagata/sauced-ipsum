@@ -85,7 +85,7 @@ function generate(length, type) {
 
       generated.push(saucy[randomNumber]);
       //if the last word was the same as the current word, randomize again
-
+      capitalizeFirst(generated);
     }
   } 
 
@@ -144,8 +144,10 @@ function generateSentence(){
     var randomNumber = Math.floor(Math.random() * saucy.length);
     sentence.push(saucy[randomNumber]);
   };
- sentence[0] = sentence[0].charAt(0).toUpperCase() + sentence[0].substr(1);
-console.log(sentence[0][0].toUpperCase())
-
+  capitalizeFirst(sentence)
   return sentence.join(" ")
+}
+
+function capitalizeFirst(sourceArray){
+  sourceArray[0] = sourceArray[0].charAt(0).toUpperCase() + sourceArray[0].substr(1);
 }
