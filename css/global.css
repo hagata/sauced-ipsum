@@ -18,6 +18,9 @@
   width: 1000px;
   margin: 0 auto;
 }
+textarea::first-letter {
+  text-transform: uppercase;
+}
 .copy-button {
   color: #fff;
 }

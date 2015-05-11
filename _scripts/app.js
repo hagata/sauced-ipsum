@@ -10,14 +10,25 @@ document.getElementById('generate-button').onclick = function() {
 
   if (document.getElementById('words').checked) {
     gentype = "words"
-  } else if (document.getElementById('paragraphs').checked) {
+  } 
+  else if(document.getElementById('sentence').checked){
+    gentype = "sentence"
+  }
+  else if (document.getElementById('paragraphs').checked) {
     gentype = "paragraphs"
   }
 
   generate(genLength, gentype)
 }
 
-//generate
+
+
+/*
+Generate
+========
+*/
+
+
 function generate(length, type) {
   
 
@@ -31,6 +42,11 @@ function generate(length, type) {
 
     }
   } 
+
+  else if(type == "sentence"){
+    var sentence = generateSentence()
+    generated.push(sentence + ".")
+  }
   
   else if (type == "paragraphs") {
     var paragraphs = []
@@ -70,4 +86,17 @@ function printGenerated(genType){
   }else{
     printToElement.value = generated.join("\r\n\r\n")
   }
+}
+
+function generateSentence(){
+  var sentence = [];
+  var sentenceLength = Math.floor(Math.random() * (14 - 6 + 1) + 6);
+
+  for (var i = 0; i < sentenceLength; i++) {
+    var randomNumber = Math.floor(Math.random() * saucy.length);
+    sentence.push(saucy[randomNumber]);
+  };
+ sentence[0] = sentence[0].charAt(0).toUpperCase() + sentence[0].substr(1);
+console.log(sentence[0][0].toUpperCase())
+  return sentence.join(" ")
 }
