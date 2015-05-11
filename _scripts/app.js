@@ -1,16 +1,4 @@
 
-
-var saucy = [
-  "Sauced",
-  "bbq",
-  "ribs",
-  "bacon",
-  "baked beans",
-  "smoked",
-  "wings",
-  "dipped in"
-
-];
 var generated = [];
 //seperate into words and phrases, would be best to keep word count accurate
 

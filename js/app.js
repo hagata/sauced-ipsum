@@ -1,16 +1,47 @@
-
-
 var saucy = [
   "Sauced",
   "bbq",
   "ribs",
   "bacon",
   "baked beans",
+  "brisket",
+  "pulled pork",
   "smoked",
+  "chicken",
   "wings",
-  "dipped in"
+  "dipped in",
+  "honey",
+  "ranch",
+  "pepper",
+  "southern",
+  "authentic",
+  "spirits",
+  "whiskey",
+  "jumbo",
+  "lightly tossed",
+  "your choice of",
+  "blue cheese",
+  "bumpkins",
+  "tater tots",
+  "egg rolls",
+  "loaded with",
+  "melted",
+  "jam",
+  "sour cream",
+  "chopped",
+  "cheezy",
+  "fritters",
+  "corbread",
+  "hushpuppies",
+  "jalapeno",
+  "chives",
+  "house-made",
+  "stuffed",
+  "rednexican nachos",
+  "black beans",
 
 ];
+
 var generated = [];
 //seperate into words and phrases, would be best to keep word count accurate
 
