@@ -41,6 +41,9 @@ var saucy = [
   "black beans",
 
 ];
+  ZeroClipboard.config( { swfPath: "node_modules/zeroclipboard/dist/ZeroClipboard.swf" } );
+
+var client = new ZeroClipboard(document.getElementById('copy-ipsum'));
 
 var generated = [];
 //seperate into words and phrases, would be best to keep word count accurate
