@@ -33,12 +33,15 @@ layout: default
   </div>
 
   <div class="output">
-    <textarea name="output-ipsum" id="output-ipsum" cols="30" rows="10" data-clipboard-text="Copy Me!"></textarea>
-    <button id="copy-ipsum"
+  <button id="copy-ipsum"
       class="copy-button"
       data-clipboard-target="output-ipsum">
       {% include svg/copyIcon.svg %} 
       Copy!</button>
+    <div name="output-ipsum" id="output-ipsum" cols="30" rows="10" data-clipboard-text="Copy Me!">
+      
+    </div>
+    
   </div>
   
   
@@ -48,8 +51,7 @@ layout: default
 
   <textarea name="paste" id="paste" cols="30" rows="10" placeholder="paste  test heh"></textarea>
 
-</div>
-
+  
 
 
 <script type="text/javascript" src="js/app.js"></script>

@@ -31,7 +31,7 @@ var saucy = [
   "chopped",
   "cheezy",
   "fritters",
-  "corbread",
+  "cornbread",
   "hushpuppies",
   "jalapeno",
   "chives",
@@ -44,6 +44,8 @@ var saucy = [
   ZeroClipboard.config( { swfPath: "node_modules/zeroclipboard/dist/ZeroClipboard.swf" } );
 
 var client = new ZeroClipboard(document.getElementById('copy-ipsum'));
+
+
 
 var generated = [];
 //seperate into words and phrases, would be best to keep word count accurate
@@ -125,12 +127,16 @@ function generate(length, type) {
 
 
 function printGenerated(genType){
-  var printToElement = document.getElementById('output-ipsum')
+  var printToInnerElement = document.getElementById('output-ipsum')
   
 	if (genType == "words"){
-    printToElement.value = generated.join(" ")
+    if(generated.length < 5){
+      printToInnerElement.innerHTML = "<h1 class='single'>" + generated.join(" ") + "</h1>"
+    }else{
+      printToInnerElement.innerHTML = "<p>" + generated.join(" ") + "</p>"
+    }
   }else{
-    printToElement.value = generated.join("\r\n\r\n")
+    printToInnerElement.innerHTML = "<p>" + generated.join("\r\n\r\n </p><p>") + "</p>";
   }
 }
 
