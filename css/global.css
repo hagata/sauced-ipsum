@@ -18,8 +18,13 @@
   width: 54em;
   margin: 0 auto;
 }
+@font-face {
+  font-family: Sauced-Typewriter-Regular;
+  src: url("../assets/fonts/Sauced-Typewriter-Regular.ttf");
+  src: url("../assets/fonts/Sauced-Typewriter-Regular.woff");
+}
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Sauced-Typewriter-Regular;
 }
 #intro {
   baackground: #333;
@@ -29,11 +34,12 @@ body {
 #intro h1 {
   text-align: center;
   font-size: 6em;
-  transition: all 1.1s ease-out;
+  transition: all 200ms ease-out;
+  margin-bottom: 0.25em;
 }
 #intro p {
   opacity: 1;
-  transition: all 0.9s ease-out;
+  transition: all 0.5s ease-out;
 }
 #intro.collapse h1 {
   text-align: left;
@@ -63,8 +69,8 @@ body {
   margin-right: 1em;
 }
 #output-ipsum p {
-  font-size: 1.2em;
-  line-height: 1.28;
+  font-size: 1em;
+  line-height: 1.5;
   max-width: 30em;
   margin: 0 auto;
   margin-bottom: 1.2em;
