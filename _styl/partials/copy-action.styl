@@ -1,0 +1,65 @@
+curve = cubic-bezier(.08,.78,.65,.92)
+
+#output-ipsum
+/* position relative */
+  &.on
+    animation shadow-move 1.2s curve 1  
+
+
+
+
+
+$keyframe-name = shadow-move
+@keyframes {$keyframe-name}
+  0%
+    /* opacity 1 */
+    text-shadow 0 3px 0px rgba(0,0,0,.5)  
+  100%
+    /* opacity 0 */
+    text-shadow 0px -40px 5px rgba(0,0,0,.0)
+
+
+
+#copyConfirmation
+  color #a5a5a5  
+  font-size 3em
+  text-align center
+  font-weight 700
+  opacity .1
+  position absolute
+  top 45%
+  left 0
+  right 0
+  opacity 0
+  pointer-events none
+  z-index10
+
+  &.on
+    animation copy-confirm-text .8s curve 1
+
+
+
+$copy = copy-confirm-text 
+@keyframes {$copy}
+  0%
+    opacity 0
+  5%
+    opacity .1
+    transform scale(.5)
+  70%
+    opacity .8
+  100%
+    opacity 0
+    transform scale(1.5)
+
+
+/* Just for show styles */
+
+#copyButton
+  border none
+  padding .25em 1.25em
+  font-size 1.5em
+  color #fff
+  background #536DFE
+  box-shadow 1px 1px 3px rgba(0,0,0,.55)
+  margin-bottom 2em

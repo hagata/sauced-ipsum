@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
   stylus = require('gulp-stylus'),
+  autoprefixer = require('gulp-autoprefixer'),
   concat = require('gulp-concat');
 ;
 
@@ -24,4 +25,13 @@ gulp.task('watch', function() {
  
 });
 
-gulp.task('default',['stylus','scripts','watch']);
+gulp.task('autoprefix', function(){
+  return gulp.src('./css/*.css')
+    .pipe(autoprefixer({
+      browsers:['last 2 versions'],
+      cascade: false
+    }))
+    .pipe(gulp.dest('./dist/'));
+})
+
+gulp.task('default',['stylus','scripts','autoprefix','watch']);

@@ -1,5 +1,6 @@
 _site
 .sass-cache
+node_modules
 node_modules/.bin
 node_modules/gulp
 node_modules/gulp-concat

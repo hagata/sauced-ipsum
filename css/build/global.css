@@ -20,8 +20,8 @@
 }
 @font-face {
   font-family: Sauced-Typewriter-Regular;
-  src: url("../assets/fonts/Sauced-Typewriter-Regular.ttf");
-  src: url("../assets/fonts/Sauced-Typewriter-Regular.woff");
+  src: url("../../assets/fonts/Sauced-Typewriter-Regular.ttf");
+  src: url("../../assets/fonts/Sauced-Typewriter-Regular.woff");
 }
 body {
   font-family: Sauced-Typewriter-Regular;
@@ -116,11 +116,20 @@ body {
 .copy-button.zeroclipboard-is-active {
   background-color: #ff5722;
 }
-#output-ipsum.on {
-  animation: shadow-move 1.2s cubic-bezier(0.08, 0.78, 0.65, 0.92) 1;
+.78,
+.65,
+.92),
+.container {
+  width: 40em;
+  margin: 0 auto;
+  position: relative;
+}
+#text.on {
+  -webkit-animation: shadow-move 1.2s $curve 1;
+  animation: shadow-move 1.2s $curve 1;
 }
 #copyConfirmation {
-  color: #a5a5a5;
+  color: #536dfe;
   font-size: 3em;
   text-align: center;
   font-weight: 700;
@@ -131,10 +140,11 @@ body {
   right: 0;
   opacity: 0;
   pointer-events: none;
+  z-index: 10;
 }
-#copyConfirmation z-index10,
 #copyConfirmation.on {
-  animation: copy-confirm-text 0.8s cubic-bezier(0.08, 0.78, 0.65, 0.92) 1;
+  -webkit-animation: copy-confirm-text 0.8s $curve;
+  animation: copy-confirm-text 0.8s $curve;
 }
 #copyButton {
   border: none;
@@ -145,68 +155,13 @@ body {
   box-shadow: 1px 1px 3px rgba(0,0,0,0.55);
   margin-bottom: 2em;
 }
-@-moz-keyframes shadow-move {
-  0% {
-/* opacity 1 */
-    text-shadow: 0 3px 0px rgba(0,0,0,0.5);
-  }
-  100% {
-/* opacity 0 */
-    text-shadow: 0px -40px 5px rgba(0,0,0,0);
-  }
-}
-@-webkit-keyframes shadow-move {
-  0% {
-/* opacity 1 */
-    text-shadow: 0 3px 0px rgba(0,0,0,0.5);
-  }
-  100% {
-/* opacity 0 */
-    text-shadow: 0px -40px 5px rgba(0,0,0,0);
-  }
-}
-@-o-keyframes shadow-move {
-  0% {
-/* opacity 1 */
-    text-shadow: 0 3px 0px rgba(0,0,0,0.5);
-  }
-  100% {
-/* opacity 0 */
-    text-shadow: 0px -40px 5px rgba(0,0,0,0);
-  }
-}
-@keyframes shadow-move {
-  0% {
-/* opacity 1 */
-    text-shadow: 0 3px 0px rgba(0,0,0,0.5);
-  }
-  100% {
-/* opacity 0 */
-    text-shadow: 0px -40px 5px rgba(0,0,0,0);
-  }
-}
-@-moz-keyframes copy-confirm-text {
-  0% {
-    opacity: 0;
-  }
-  5% {
-    opacity: 0.1;
-    transform: scale(0.5);
-  }
-  70% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 0;
-    transform: scale(1.5);
-  }
-}
 @-webkit-keyframes copy-confirm-text {
   0% {
     opacity: 0;
   }
   5% {
     opacity: 0.1;
+    -webkit-transform: scale(0.5);
     transform: scale(0.5);
   }
   70% {
@@ -214,22 +169,7 @@ body {
   }
   100% {
     opacity: 0;
-    transform: scale(1.5);
-  }
-}
-@-o-keyframes copy-confirm-text {
-  0% {
-    opacity: 0;
-  }
-  5% {
-    opacity: 0.1;
-    transform: scale(0.5);
-  }
-  70% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 0;
+    -webkit-transform: scale(1.5);
     transform: scale(1.5);
   }
 }
@@ -239,6 +179,7 @@ body {
   }
   5% {
     opacity: 0.1;
+    -webkit-transform: scale(0.5);
     transform: scale(0.5);
   }
   70% {
@@ -246,6 +187,7 @@ body {
   }
   100% {
     opacity: 0;
+    -webkit-transform: scale(1.5);
     transform: scale(1.5);
   }
 }
