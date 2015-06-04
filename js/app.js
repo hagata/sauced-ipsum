@@ -10,9 +10,9 @@ triggerConfirm.addEventListener("click", function() {
  
   
   setTimeout(function() {
-    copyConfirm.classList.toggle("on");
-		text.classList.toggle("on");
-  }, 1000)
+  	copyConfirm.classList.toggle("on");
+  	confirmText.classList.toggle("on");
+  }, 800)
 })
 var saucy = [
   "Sauced",
