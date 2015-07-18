@@ -1,3 +1,7 @@
+Sauced Font Files
+
+Use:
+<code>
 @font-face
   font-family Sauced-Typewriter-Regular
   src url(../assets/fonts/FVSaucedTypewriter-Regular.ttf)
@@ -7,3 +11,4 @@ body
   font-family Sauced-Typewriter-Regular
   text-rendering optimizeLegibility !important;
   -webkit-font-smoothing antialiased !important;
+</code>
